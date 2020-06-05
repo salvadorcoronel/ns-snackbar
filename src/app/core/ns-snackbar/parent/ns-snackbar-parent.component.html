@@ -1,0 +1,14 @@
+<GridLayout
+  rows="auto" 
+  (loaded)="loadedView($event)" 
+  visibility="collapse"
+  opacity="0"
+  verticalAlignment="bottom">
+  <GridLayout
+    row="0"
+    rows="*">
+    <StackLayout row="0" >
+      <ng-container #content></ng-container>
+    </StackLayout>
+  </GridLayout>
+</GridLayout>

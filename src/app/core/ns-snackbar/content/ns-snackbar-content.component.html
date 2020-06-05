@@ -1,0 +1,24 @@
+<GridLayout 
+  *ngIf="message" rows="*" [columns]="columns"
+  [paddingTop]="buttonVerticalPadding"
+  [paddingBottom]="buttonVerticalPadding"
+  [className]="messageClasses"
+  [color]="messageTitleColor"
+  [backgroundColor]="messageBackgroundColor"
+  [borderRadius]="messageBorderRadius"
+  [borderColor]="messageBorderColor">
+  <Label row="0" col="0" 
+    class="label--snackbar"
+    [text]="message && message.title"></Label>
+  <Button *ngIf="action && action.title" 
+    row="0" col="1"
+    padding="0"
+    class="button--snackbar"
+    [text]="action.title"
+    [color]="buttonTitleColor"
+    [backgroundColor]="buttonBackgroundColor"
+    [borderRadius]="buttonBorderRadius"
+    [borderColor]="buttonBorderColor"
+    (tap)="onAction()"></Button>
+</GridLayout>
+

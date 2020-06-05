@@ -1,0 +1,9 @@
+<ActionBar>
+    <Label text="Home"></Label>
+</ActionBar>
+
+<StackLayout>
+    <!-- Add your page content here -->
+    <TextView [(ngModel)]="message"></TextView>
+    <Button text="Open Snackbar" (tap)="openSnackbar()" class="btn btn-primary m-b-20"></Button>
+</StackLayout>
